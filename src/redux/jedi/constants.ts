@@ -1,0 +1,3 @@
+export const FETCH_JEDI_REQUEST = '@@jedi/FETCH_JEDI_REQUEST';
+export const FETCH_JEDI_SUCCESS = '@@jedi/FETCH_JEDI_SUCCESS';
+export const FETCH_JEDI_FAILURE = '@@jedi/FETCH_JEDI_FAILURE';

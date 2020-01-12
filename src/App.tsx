@@ -1,17 +1,24 @@
-import React, { Component, PropTypes } from 'react';
+import * as React from 'react';
 import { connect } from 'react-redux';
+
 import logo from './logo.svg';
 import './App.css';
 
-import { fetchJedi } from './action';
+import { fetchJedi } from './redux/jedi/actions';
+import {Jedi} from "./redux/jedi/types";
 
-function mapStateToProps(state) {
+interface IAppProps {
+  jedi: Array<Jedi>;
+  dispatch: any;
+}
+
+function mapStateToProps(state:any) {
   return {
     jedi: state.jedi,
   };
 }
 
-class App extends Component {
+class App extends React.Component<IAppProps, {}> {
   componentWillMount() {
     this.fetchJedi();
   }
@@ -29,7 +36,7 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Welcome to React</h2>
         </div>
-        {jedi.map((jedi, index) => (
+        {jedi.length && jedi.map((jedi:Jedi, index) => (
           <div key={index}>
             Jedi: id: {jedi.id} name: {jedi.name}
           </div>
@@ -38,10 +45,6 @@ class App extends Component {
     );
   }
 }
-
-App.propTypes = {
-  jedi: PropTypes.array,
-};
 
 export default connect(
   mapStateToProps,
