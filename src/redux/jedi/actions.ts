@@ -4,13 +4,13 @@ import {
   FETCH_JEDI_SUCCESS,
 } from './constants';
 import { getJedi } from '../../services/api/jedi';
-import { Jedi } from './types';
+import { IJedi } from './types';
 
 const fetchJediRequest = () => ({
   type: FETCH_JEDI_REQUEST,
 });
 
-const fetchJediSuccess = (jedi: Jedi) => ({
+const fetchJediSuccess = (jedi: IJedi) => ({
   type: FETCH_JEDI_SUCCESS,
   payload: {
     jedi,

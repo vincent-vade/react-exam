@@ -1,15 +1,10 @@
-import { Jedi } from './types';
+import { IJedi, IJediState } from './types';
 
 import {
   FETCH_JEDI_FAILURE,
   FETCH_JEDI_REQUEST,
   FETCH_JEDI_SUCCESS,
 } from './constants';
-
-interface IJediState {
-  jedi: Array<Jedi>;
-  error: any;
-}
 
 const initialState = {
   jedi: [],
