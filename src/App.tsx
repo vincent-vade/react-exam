@@ -2,8 +2,8 @@ import * as React from 'react';
 
 import Jedi from './components/Jedi';
 
-import logo from './logo.svg';
-import './App.css';
+import logo from './assets/svg/logo.svg';
+import './assets/css/App.css';
 
 const App: React.FunctionComponent<{}> = () => {
   return (

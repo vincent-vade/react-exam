@@ -1,6 +1,5 @@
 # react-exam
-
-`<insert here a description of the app>`
+This React App list all jedi of star wars universe.
 
 ## Tasks
 
@@ -27,5 +26,42 @@ Hint: All files that you should modify are in `./src`
 - Launch the app through docker
 
 ## Getting started
+### Install
 
-`<insert here how to boot the app and use it>`
+```
+yarn install
+```
+
+### Development
+
+For dev mode
+launch react app and mock server
+
+```
+yarn start
+
+// or with mock server
+yarn start && yarn api
+```
+
+and go to [localhost:3000](https://localhost:3000)
+
+Launch only server
+
+```
+yarn api
+```
+
+#### Test
+
+```
+yarn test
+```
+#### build
+
+Launch this command for building app in production mode
+
+```
+yarn build
+```
+
