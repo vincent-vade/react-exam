@@ -1,7 +1,7 @@
 module.exports = {
   parser: '@typescript-eslint/parser',
   extends: [
-    'plugin:react/recommended', // Uses the recommended rules from @eslint-plugin-react
+    'plugin:react/recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:prettier/recommended',
     'prettier',
@@ -10,7 +10,7 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'module',
     ecmaFeatures: {
-      jsx: true, // Allows for the parsing of JSX
+      jsx: true,
     },
   },
   rules: {
@@ -18,7 +18,7 @@ module.exports = {
   },
   settings: {
     react: {
-      version: 'detect', // Tells eslint-plugin-react to automatically detect the version of React to use
+      version: 'detect',
     },
   },
 };
